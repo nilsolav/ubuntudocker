@@ -1,4 +1,4 @@
-FROM pytorch:latest
+FROM pytorch/pytorch:latest
 
 RUN mkdir /install
 WORKDIR /install
