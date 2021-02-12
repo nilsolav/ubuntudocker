@@ -1,12 +1,7 @@
 # ubuntudocker
 
 Dockerhub integration
-docker build --tag ubuntu:nilsolav .
-docker run
-
-docker run --rm -it -d --name nilsolav_pytorch -v /localscratch/nilsolav:/data/ -v /home/nilsolav/repos:/repos/ ubuntu:nilsolav
-
-docker run --rm -it -d --name nilsolav_pytorch ubuntu:nilsolav
-docker exec
-
-docker exec -it ubuntu:nilsolav bash
+docker build --tag nilsolavubuntu .
+docker run --rm -it -d --name nilsolavubuntu -v /localscratch/nilsolav:/data/ -v /home/nilsolav/repos:/repos/ nilsolavubuntu:test
+docker run --rm -it -d --name nilsolavubuntu nilsolavubuntu:test
+docker exec -it nilsolavubuntu zsh
