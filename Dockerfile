@@ -4,7 +4,10 @@ RUN mkdir /install
 WORKDIR /install
 RUN apt-get update
 RUN apt-get -qq -y install git emacs zsh wget curl sudo
-# RUN conda install -c conda-forge jupyterlab plotly jupyter-dash dash pandas anaconda ipywidgets
+RUN conda install -c conda-forge jupyterlab
+# plotly jupyter-dash dash pandas anaconda ipywidgets
+RUN conda install -c conda-forge plotly pandas ipywidgets
+
 # wget https://github.com/plotly/jupyter-dash/blob/master/notebooks/getting_started.ipynb
 
 # Install R
