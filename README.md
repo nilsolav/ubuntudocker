@@ -1,7 +1,12 @@
 # ubuntudocker
+(mkdir ~/repos)
 
-Dockerhub integration
+cd ~/repos
+
+git clone https://github.com/nilsolav/ubuntudocker/
+
 docker build --tag nilsolavubuntu .
-docker run --rm -it -d --name nilsolavubuntu -v /localscratch/nilsolav:/data/ -v /home/nilsolav/repos:/repos/ nilsolavubuntu:test
-docker run --rm -it -d --name nilsolavubuntu nilsolavubuntu:test
+
+docker run --rm -it -d --name nilsolavubuntu -v /localscratch_hdd/nilsolav:/data/ -v /home/nilsolav/repos:/repos/ nilsolavubuntu
+
 docker exec -it nilsolavubuntu zsh
