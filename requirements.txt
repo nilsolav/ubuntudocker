@@ -59,7 +59,6 @@ Deprecated==1.2.13
 distlib==0.3.0
 distributed==2022.6.0
 distro==1.4.0
-distro-info==0.23ubuntu1
 docker==5.0.3
 docutils==0.17.1
 docx2txt==0.8
