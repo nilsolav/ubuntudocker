@@ -17,3 +17,4 @@ scipy==1.8.1
 xarray==2022.3.0
 yapf==0.29.0
 zarr==2.11.3
+boto3
