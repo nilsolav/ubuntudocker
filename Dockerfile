@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM ubuntu
 
 RUN mkdir /install
 WORKDIR /install
@@ -18,7 +18,7 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master
 # Install emacs+elpy
 COPY .emacs /home/nilsolav/.emacs
 COPY requirements.txt /install
-RUN pip install -r requirements.txt
+#RUN pip install -r requirements.txt
 
 CMD zsh
 
