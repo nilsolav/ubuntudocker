@@ -14,6 +14,10 @@ docker run -it -d --name nilsolavubuntu -v /localscratch_hdd/:/localscratch_hdd/
 
 docker exec -it nilsolavubuntu zsh
 
+Run container as root:
+
+docker exec -u root -t -i nilsolavubuntu /bin/zsh
+
 ## Inside container
 
 <git install repo>
