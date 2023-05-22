@@ -1,9 +1,9 @@
-FROM ubuntu
+FROM ubuntu:23.10
 
 RUN mkdir /install
 WORKDIR /install
 RUN apt-get update
-RUN apt-get -qq -y install git emacs zsh wget curl sudo
+RUN apt-get -qq -y install git emacs zsh wget curl sudo python3.6
 
 # Install Rstox
 #RUN r install.packages("RstoxBase", repos = c("https://stoxproject.github.io/repo", "https://cloud.r-project.org"))
