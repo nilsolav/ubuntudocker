@@ -16,9 +16,9 @@ USER nilsolav
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # Install emacs+elpy
-COPY .emacs /home/nilsolav/.emacs
+COPY .emacs /root/.emacs
 COPY requirements.txt /install
-#RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt
 
 CMD zsh
 
