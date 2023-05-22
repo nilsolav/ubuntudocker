@@ -3,7 +3,7 @@ FROM ubuntu:23.10
 RUN mkdir /install
 WORKDIR /install
 RUN apt-get update
-RUN apt-get -qq -y install git emacs zsh wget curl sudo python3.6
+RUN apt-get -qq -y install git emacs zsh wget curl sudo pip python3.6
 
 # Install Rstox
 #RUN r install.packages("RstoxBase", repos = c("https://stoxproject.github.io/repo", "https://cloud.r-project.org"))
@@ -18,7 +18,6 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master
 # Install emacs+elpy
 COPY .emacs /root/.emacs
 COPY requirements.txt /install
-#RUN pip install -r requirements.txt
-
+RUN pip install -r requirements.txt --break-system-packages
 CMD zsh
 
