@@ -10,8 +10,8 @@ RUN apt-get -qq -y install git emacs zsh wget curl sudo python3.6
 #RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # Create ans switch to user
-RUN useradd --create-home --shell /bin/zsh nilsolav
-USER nilsolav
+#RUN useradd --create-home --shell /bin/zsh nilsolav
+#USER nilsolav
 # Install Oh-My-zsh
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
