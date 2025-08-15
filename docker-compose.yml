@@ -1,0 +1,15 @@
+services:
+  ubuntudocker-novnc:
+    container_name: ubuntudocker-novnc
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:6080" # HTTP Web user interface
+      - "5900:5900" # Optional, VNC server port
+    environment:
+      - SCREEN_RESOLUTION=1366x768
+    volumes:
+      - /etc/localtime:/etc/localtime:ro # Set the container's timezone to match the host
+      - /:/home/nilsolav/data:ro # Optional 1, replace with actual path for read-only access
+    restart: unless-stopped

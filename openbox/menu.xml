@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_menu>
+  <menu id="root-menu" label="Openbox 3">
+    <item label="LSSS">
+      <action name="Execute">
+        <execute>sh -c '/opt/lsss-$LSSS_VERSION/lsss/LSSS.sh'</execute>
+      </action>
+    </item>
+    <item label="Terminal emulator">
+      <action name="Execute">
+        <execute>xterm</execute>
+      </action>
+    </item>
+    <separator />
+    <item label="Restart desktop">
+      <action name="Restart" />
+    </item>
+  </menu>
+</openbox_menu>
